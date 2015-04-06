@@ -76,7 +76,6 @@ public class ForecastFragment extends Fragment {
             updateWeather();
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -101,9 +100,9 @@ public class ForecastFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 String forecast = mForecastAdapter.getItem(position);
                 // Toast.makeText(getActivity(),forecast,Toast.LENGTH_SHORT).show();
-                Intent detailIntent = new Intent(getActivity(),DetailActivity.class)
+                Intent intent = new Intent(getActivity(),DetailActivity.class)
                        .putExtra(Intent.EXTRA_TEXT,forecast);
-                startActivity(detailIntent);
+                startActivity(intent);
             }
         });
 
